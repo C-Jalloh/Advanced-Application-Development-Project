@@ -20,10 +20,8 @@ Backend/.mvn/
 Backend/.idea/
 Backend/bin/
 Backend/*.log
-Backend/uploads/movies/*
-Backend/uploads/music/*
-!Backend/uploads/movies/.gitkeep
-!Backend/uploads/music/.gitkeep
+Backend/uploads/
+!Backend/uploads.tar.gz
 
 # Node / Frontend
 node_modules/
@@ -37,6 +35,6 @@ __pycache__/
 *.class
 
 # Database
-# DOCS/database_setup.sql # Usually keep this for submission
+# DOCS/database_setup.sql
 data/*.csv
 !data/*.sample.csv

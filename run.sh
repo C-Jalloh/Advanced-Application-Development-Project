@@ -10,6 +10,15 @@ cleanup() {
 # Trap SIGINT (Ctrl+C) and SIGTERM
 trap cleanup SIGINT SIGTERM
 
+# Check and extract uploads if necessary
+if [ ! -d "Backend/uploads" ]; then
+    echo "Media assets directory not found. Extracting uploads.tar.gz..."
+    tar -xzf Backend/uploads.tar.gz -C Backend/
+elif [ -z "$(ls -A Backend/uploads)" ]; then
+    echo "Media assets directory is empty. Extracting uploads.tar.gz..."
+    tar -xzf Backend/uploads.tar.gz -C Backend/
+fi
+
 echo "Starting Backend..."
 cd Backend
 ./mvnw spring-boot:run &
