@@ -1,0 +1,42 @@
+# OS Files
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+
+# Project Environment
+venv/
+.env
+.env.local
+
+# IDEs
+.vscode/
+.idea/
+*.iml
+
+# Java / Spring Boot (Backend)
+Backend/target/
+Backend/.mvn/
+Backend/.idea/
+Backend/bin/
+Backend/*.log
+Backend/uploads/movies/*
+Backend/uploads/music/*
+!Backend/uploads/movies/.gitkeep
+!Backend/uploads/music/.gitkeep
+
+# Node / Frontend
+node_modules/
+Frontend/vue-frontend/node_modules/
+Frontend/vue-frontend/dist/
+Frontend/vue-frontend/.env
+
+# Python
+__pycache__/
+*.py[cod]
+*.class
+
+# Database
+# DOCS/database_setup.sql # Usually keep this for submission
+data/*.csv
+!data/*.sample.csv

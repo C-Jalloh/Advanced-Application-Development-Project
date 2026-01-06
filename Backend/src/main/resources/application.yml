@@ -1,0 +1,23 @@
+spring:
+  application:
+    name: Backend
+  datasource:
+    url: ${DB_URL:jdbc:mysql://localhost:3306/_backend?useSSL=false&serverTimezone=UTC&allowPublicKeyRetrieval=true}
+    username: ${DB_USERNAME:root}
+    password: ${DB_PASSWORD:ebrim@CJ@lloh25}
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQLDialect
+  servlet:
+    multipart:
+      max-file-size: 10MB
+      max-request-size: 10MB
+
+jwt:
+  secret: ${JWT_SECRET:a3f57e5b4ef5b5c1b1cc2d4c9e4e4f0a5d6fb3a3324e9d1dbb7f5e1b7e1c2f8d}
+  expiration: ${JWT_EXPIRATION:86400000} # 1 day
